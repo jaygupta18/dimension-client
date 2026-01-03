@@ -190,7 +190,7 @@ export default function Explore() {
                     : 'grid-cols-1'
                 }`}>
                   {objects.map((obj, i) => (
-                    <ObjectCard key={obj.id} object={obj} index={i} />
+                    <ObjectCard key={obj._id} object={obj} index={i} />
                   ))}
                 </div>
               </>
