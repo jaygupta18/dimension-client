@@ -15,7 +15,7 @@ export default function ObjectCard({ object, index = 0 }) {
           {/* Thumbnail */}
           <div className="aspect-square relative overflow-hidden">
             <img
-              src={object.thumbnailUrl || 'https://picsum.photos/400/400'}
+              src={`https://dimension-server-bckr.onrender.com${object.thumbnailUrl}` || 'https://picsum.photos/400/400'}
               alt={object.name}
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
