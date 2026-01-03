@@ -83,7 +83,7 @@ export default function Upload() {
       if (!res.ok) throw new Error('Upload failed')
 
       const object = await res.json()
-      navigate(`/object/${object.id}`)
+      navigate(`/object/${object._id}`)
     } catch (error) {
       console.error('Upload error:', error)
       alert('Failed to upload. Please try again.')
