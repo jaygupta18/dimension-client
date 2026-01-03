@@ -10,7 +10,7 @@ export default function ObjectCard({ object, index = 0 }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
     >
-      <Link to={`/object/${object.id}`} className="block group">
+      <Link to={`/object/${object._id}`} className="block group">
         <div className="relative glass rounded-2xl overflow-hidden card-hover">
           {/* Thumbnail */}
           <div className="aspect-square relative overflow-hidden">
