@@ -124,16 +124,18 @@ export default function ObjectDetail() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
           >
-            <Model3DViewer 
-              modelUrl={object.modelUrl} 
-              className="aspect-square"
-            />
+            {object?.modelUrl && (
+  <Model3DViewer
+    modelUrl={`https://dimension-server-bckr.onrender.com${object.modelUrl}`}
+    className="aspect-square"
+  />
+)}
             
             {/* Thumbnail gallery */}
             <div className="flex gap-3 mt-4">
               <div className="w-20 h-20 rounded-xl overflow-hidden border-2 border-glow">
                 <img 
-                  src={object.thumbnailUrl} 
+                  src={`https://dimension-server-bckr.onrender.com${object.thumbnailUrl}`} 
                   alt={object.name}
                   className="w-full h-full object-cover"
                 />
